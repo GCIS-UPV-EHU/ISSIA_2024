@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application name="MyCustomApp">
+  <microservice name="NumberGeneratorButton" service="IntegerNumbers" imgBase="ekhurtado/gcis-issia-24:number-generator" customization="{'custom_type': 'random', 'custom_initialvalue': 0}">
+    <outPort name="NumberGeneratorButtonOPort" protocol="HTTP" dataType="TNumber"/>
+  </microservice>
+  <microservice name="AintzaneCustom" service="AintzaneFunction" imgBase="aarmentia/issia2024:custom-app">
+    <inPort name="AintzaneCustomIPort" protocol="HTTP" dataType="TZenbaki" number="7000"/>
+    <outPort name="AintzaneCustomOPort" protocol="HTTP" dataType="TZenbaki"/>
+  </microservice>
+  <microservice name="NumberDisplay" service="ConsoleDisplay" imgBase="ekhurtado/gcis-issia-24:number-display">
+    <inPort name="NumberDisplayIPort" protocol="HTTP" dataType="TNumber" number="7000"/>
+  </microservice>
+  <channel from="NumberGeneratorButtonOPort" to="AintzaneCustomIPort"/>
+  <channel from="AintzaneCustomOPort" to="NumberDisplayIPort"/>
+</application>

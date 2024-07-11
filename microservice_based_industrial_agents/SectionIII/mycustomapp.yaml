@@ -1,0 +1,39 @@
+apiVersion: ehu.gcis.org/v1alpha1
+kind: Application
+metadata:
+  name: mycustomapp
+spec:
+  microservices: 
+    - name: numbergeneratorbutton
+      service: IntegerNumbers
+      image: ekhurtado/gcis-issia-24:number-generator
+      customization: '{"custom_type": "random", "custom_initialvalue": 0}'
+      outPort:
+        name: numbergeneratorbutton-oport
+        dataType: TNumber
+        protocol: HTTP
+    - name: aintzanecustom
+      service: AintzaneFunction
+      image: aarmentia/issia2024:custom-app
+      inPort:
+        name: aintzanecustom-iport
+        dataType: TZenbaki
+        protocol: HTTP
+        number: '7000'
+      outPort:
+        name: aintzanecustom-oport
+        dataType: TZenbaki
+        protocol: HTTP
+    - name: numberdisplay
+      service: ConsoleDisplay
+      image: ekhurtado/gcis-issia-24:number-display
+      inPort:
+        name: numberdisplay-iport
+        dataType: TNumber
+        protocol: HTTP
+        number: '7000'
+  channels: 
+    - from: numbergeneratorbutton-oport
+      to: aintzanecustom-iport
+    - from: aintzanecustom-oport
+      to: numberdisplay-iport
