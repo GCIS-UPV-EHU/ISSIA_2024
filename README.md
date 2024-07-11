@@ -8,10 +8,10 @@ This repository contains all the resources worked with during the ISSIA.
 
 The content is structured as follows:
 
-- [Keynote resources](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/keynote_resources): contains the resources of the regular, research and industry keynotes provided by the speakers in the chronological order according to the time schedule of the event.
-- [Multi-agent programming](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/multi_agent_programming): contains the files related to the sessions `Multi-agent programming (part I): Fundamentals`.
-- [ROS-SPADE use case](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/ros_spade_use_case): contains the files related to the necessary support structure of the use case presented in `Multi-agent programming (part II): Gateway Agent: A customization mechanism for asset integration` and `Multi-agent programming (part III): IEEE 2660.1-2020: Asset integration practices`. [Reference article](https://doi.org/10.1016/j.compind.2023.103859).
-- [Microservice-based Industrial Agents](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/microservice_based_industrial_agents): contains the files related to the session `Microservice-based Industrial Agents: Managing manufacturing applications through the Edge-Fog-Cloud continuum`. [Reference article](https://doi.org/10.1016/j.future.2024.03.053).
+- [Keynote resources](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/keynote_resources): resources of the regular, research and industry keynotes provided by the speakers in the chronological order according to the time schedule of the event.
+- [Multi-agent programming](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/multi_agent_programming): files related to the session `Multi-agent programming (part I): Fundamentals`.
+- [ROS-SPADE use case](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/ros_spade_use_case): files related to Turtlebot-Warehouse use case presented in `Multi-agent programming (part II): Gateway Agent: A customization mechanism for asset integration` and `Multi-agent programming (part III): IEEE 2660.1-2020: Asset integration practices`. [Reference article](https://doi.org/10.1016/j.compind.2023.103859).
+- [Microservice-based Industrial Agents](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/microservice_based_industrial_agents): files related to the session `Microservice-based Industrial Agents: Managing manufacturing applications through the Edge-Fog-Cloud continuum`. [Reference article](https://doi.org/10.1016/j.future.2024.03.053).
 
 ## Additional resources
 
