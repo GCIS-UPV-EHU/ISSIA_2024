@@ -1,0 +1,50 @@
+<script type="text/javascript">
+    RED.nodes.registerType('CustomComponent',{
+        category: 'custom',
+        color: '#959595',
+        defaults: {
+            componentname: {value:""},
+            dockerimage: {value:""},
+            service: {value:""},
+        },
+        inputs:1,
+        outputs:1,
+        inputLabels: "DataType of inPort is TNumber",
+        outputLabels: "DataType of outPort is TNumber",
+        icon: "prozesatze_zenbakiak.png",
+        label: function() {
+            return this.label || "CustomComponent";
+        },
+        oneditprepare: function() {
+            var node = this;
+            $("#node-input-componentname").on("change", function() {
+                node.label = $(this).val();
+            });
+        },
+        oneditsave: function () {
+            this.label = $("#node-input-componentname").val();
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="CustomComponent">
+    <div class="form-row">
+        <label for="node-input-componentname"><i class="fa fa-tag"></i> Add the component name </label>
+        <input name="componentname" id="node-input-componentname"
+               type="text" placeholder="Component name"/>
+        <br><br>
+        <label for="node-input-dockerimage"><i class="fa fa-tag"></i> Add the Docker image </label>
+        <input name="dockerimage" id="node-input-dockerimage"
+               type="text" placeholder="Docker image (<repo>/<image name>:<tag>)"/>
+        <br><br>
+        <label for="node-input-service"><i class="fa fa-tag"></i> Add your service </label>
+        <input name="service" id="node-input-service"
+               type="text" placeholder="Service name"/>
+        <br><br>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="CustomComponent">
+    <p>This is a Fog Component to add your custom services.</p>
+
+</script>

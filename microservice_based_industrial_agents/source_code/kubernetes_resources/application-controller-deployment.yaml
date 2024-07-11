@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: application-controller
+  name: application-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: application-controller
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: application-controller
+    spec:
+      containers:
+      - image: ekhurtado/gcis-issia-24:application-controller
+        imagePullPolicy: Always
+        name: application-controller
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+      nodeSelector:
+        node-type: master
+status: {}

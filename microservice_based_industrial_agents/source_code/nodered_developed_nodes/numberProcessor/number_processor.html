@@ -1,0 +1,98 @@
+<!--Customization datuak erakusteko kodea-->
+<script type="text/javascript">
+    function showProcessingNumbersCustomization() {
+        const selectElement = document.getElementById("node-input-function");
+        const stepSizeContainer = document.getElementById("contenedor-step-size");
+        const multiplierContainer = document.getElementById("contenedor-multiplier");
+
+        switch (selectElement.value) {
+            case "":
+                stepSizeContainer.style.display = "block";
+                multiplierContainer.style.display = "block";
+                break;
+            case "BalioaHanditu" || "DecreaseValue":
+                stepSizeContainer.style.display = "block";
+                multiplierContainer.style.display = "none";
+                break;
+            case "MultiplyValue":
+                stepSizeContainer.style.display = "none";
+                multiplierContainer.style.display = "block";
+                break;
+            default:
+                stepSizeContainer.style.display = "block";
+                multiplierContainer.style.display = "block";
+                break;
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('NumberProcessor',{
+        category: 'processing',
+        color: '#f0e007',
+        defaults: {
+            function: {value:""},
+            portnumber: {value: -1},
+            stepsize: {value: -1},
+            multiplier: {value: -1}
+        },
+        inputs:1,
+        outputs:1,
+        inputLabels: "DataType of inPort is TNumber",
+        outputLabels: "DataType of outPort is TNumber",
+        icon: "processing_icon.png",
+        label: function() {
+            return this.label || "NumberProcessor";
+        },
+        oneditprepare: function() {
+            var node = this;
+            $("#node-input-function").on("change", function() {
+                node.label = $(this).val();
+            });
+        },
+        oneditsave: function () {
+            if ($("#node-input-function").val() === "BalioaHanditu") {
+                this.label = "IncreaseValue";
+            } else {
+                this.label = $("#node-input-function").val();
+            }
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="NumberProcessor">
+    <div class="form-row">
+        <label for="node-input-function"><i class="fa fa-tag"></i> Functionalities </label><span>&nbsp;&nbsp;</span>
+        <select name="function" id="node-input-function">
+<!--        <select name="function" id="node-input-function" onchange="showProcessingNumbersCustomization()">-->
+            <option value="BalioaHanditu">Increase value</option>
+            <option value="DecreaseValue">Decrease value</option>
+            <option value="MultiplyValue">Multiply value</option>
+        </select>
+        <br><!--<br><br><br><br>-->
+        <label for="node-input-portnumber"><i class="fa fa-tag"></i> Select input port number </label>
+        <input name="portnumber" id="node-input-portnumber"
+               type="number" min="0" max= "65536" step="1" placeholder="Input port number"/>
+        <br><br>
+        <div id="contenedor-step-size" style="display: block;">
+            <label for="node-input-stepsize"><i class="fa fa-tag"></i> Select step size </label>
+            <input name="stepSize" id="node-input-stepsize" type="number"
+                   min="0" step="1" placeholder="Step size">
+        </div>
+        <div id="contenedor-multiplier" style="display: block;">
+            <label for="node-input-multiplier"><i class="fa fa-tag"></i> Select multiplier </label>
+            <input name="multiplierInput" id="node-input-multiplier" type="number"
+                   min="0" step="1" placeholder="Multiplier">
+        </div>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="NumberProcessor">
+    <p>This is the Fog component for processing numbers. Its main purpose is to process numbers, performing operations on the numbers it obtains, and for this, it presents three functionalities. Each one offers several <em>Custom</em> variables for customizing the processing:</p>
+    <ul>
+        <li><strong>Increase the value:</strong> This functionality increases the value obtained. It provides the variable '<em>custom_step</em>' to specify the scaling step. The data type of this functionality is <u>TNumber</u>.</li>
+        <li><strong>Decrease the value:</strong> This functionality increases the value obtained. It provides the variable '<em>custom_step</em>' to specify the shrinking step. The data type of this functionality is <u>TNumber</u>.</li>
+        <li><strong>Multiply the value:</strong> This functionality increases the value obtained. It provides the variable '<em>custom_multiplier</em>' to specify the value of the multiplier. The data type of this functionality is <u>TNumber</u>.</li>
+    </ul>
+
+</script>

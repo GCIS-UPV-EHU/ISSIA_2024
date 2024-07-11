@@ -1,0 +1,116 @@
+<!--Customization datuak erakusteko kodea-->
+<script type="text/javascript">
+    function showCreatingNumbersCustomization() {
+        const selectElement = document.getElementById("node-input-function");
+        const customizationContainer = document.getElementById("contenedor-customization");
+
+        switch (selectElement.value) {
+            case "":
+                customizationContainer.style.display = "none";
+                break;
+            default:
+                customizationContainer.style.display = "block";
+                break;
+        }
+    }
+
+    function performButtonClick(node) {
+        // Mensaje HTTP para que reciba el aviso el JavaScript (tiene un listener)
+        $.ajax({
+            url: "buttonnode/" + node.id,
+            type: "POST",
+            data: JSON.stringify({"nodeID": node.id}),
+            contentType: "application/json; charset=utf-8",
+            success: function (resp) {
+                RED.notify(node._("buttonnode.success", { label: label }), { type: "success", id: "buttonnode", timeout: 2000 });
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                if (jqXHR.status == 404) {
+                    RED.notify(node._("common.notification.error", { message: node._("common.notification.errors.not-deployed") }), "error");
+                } else if (jqXHR.status == 500) {
+                    RED.notify(node._("common.notification.error", { message: node._("buttonnode.errors.failed") }), "error");
+                } else if (jqXHR.status == 0) {
+                    RED.notify(node._("common.notification.error", { message: node._("common.notification.errors.no-response") }), "error");
+                } else {
+                    RED.notify(node._("common.notification.error", { message: node._("common.notification.errors.unexpected", { status: jqXHR.status, message: textStatus }) }), "error");
+                }
+            }
+        });
+    }
+
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('NumberGeneratorButton',{
+        category: 'generators',
+        color: '#14a7e0',
+        defaults: {
+            function: {value:""},
+            valuetype: {value:""},
+            firstvalue: {value: -999},
+        },
+        inputs:0,
+        outputs:1,
+        outputLabels: "DataType of inPort is TNumber",
+        icon: "number_generator_icon.png",
+        label: function() {
+            return this.label || "NumberGeneratorButton";
+        },
+        button: {
+            enabled: function() {
+                return !this.changed
+            },
+            onclick: function () {
+                if (this.changed) {
+                    return RED.notify(RED._("notification.warning", { message: RED._("notification.warnings.undeployedChanges") }), "warning");
+                }
+                performButtonClick(this);
+            }
+        },
+        oneditprepare: function() {
+            var node = this;
+            $("#node-input-function").on("change", function() {
+                node.label = $(this).val();
+            });
+        },
+        oneditsave: function () {
+            this.label = $("#node-input-function").val();
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="NumberGeneratorButton">
+    <div class="form-row">
+        <label for="node-input-function"><i class="fa fa-tag"></i> Functionalities </label><span>&nbsp;&nbsp;</span>
+        <select name="function" id="node-input-function">
+<!--        <select name="function" id="node-input-function" onchange="showCreatingNumbersCustomization()">-->
+            <option value="NaturalNumbers">Natural numbers</option>
+            <option value="IntegerNumbers">Integer numbers</option>
+            <option value="DecimalNumbers">Decimal numbers</option>
+        </select>
+        <br>
+        <div id="contenedor-customization" style="display: block;">
+            <label for="node-input-valuetype"><i class="fa fa-tag"></i> Select generation type </label>
+            <select name="function" id="node-input-valuetype">
+                <option value="random">Random values</option>
+                <option value="incremental">Incremental values</option>
+                <option value="decremental">Decremental values</option>
+            </select>
+            <br>
+            <label for="node-input-firstvalue"><i class="fa fa-tag"></i> Add initial value </label>
+            <input name="multiplierInput" id="node-input-firstvalue" type="number"
+                   step="any" placeholder="Initial number">
+        </div>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="NumberGeneratorButton">
+    <p>This is the Fog component for generating numbers. Its main purpose is to generate different kind of numbers, for which it presents three functionalities:</p>
+    <ul>
+        <li><strong>Natural numbers:</strong> This functionality produces natural values, i.e. numbers in the set { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10...}. The data type of this functionality is <u>TNumber</u>.</li>
+        <li><strong>Integer numbers:</strong> This functionality produces integer values, i.e. numbers in the set {... -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5 ...}. The data type of this functionality is <u>TNumber</u>.</li>
+        <li><strong>Decimal numbers:</strong> This functionality produces integer values, i.e. numbers in the set {... -2.5, -1.9, 0.8, 10.59 ...}. The data type of this functionality is <u>TNumber</u>.</li>
+    </ul>
+    <p>In addition, all functions provide <em>Custom </em>variables for customization. On the one hand, '<em>custom_type</em>' offers the possibility to determine the way the numbers are generated, thanks to three options: random, ascending or descending. In the last two cases there will be only one step. Alternatively, the initial value can be specified with the variable '<em>custom_initialvalue</em>'<em>.</em></p>
+
+</script>

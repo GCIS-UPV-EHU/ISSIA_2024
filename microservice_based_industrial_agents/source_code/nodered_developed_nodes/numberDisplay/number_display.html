@@ -1,0 +1,76 @@
+<!--Customization datuak erakusteko kodea-->
+<script type="text/javascript">
+    function showShowNumbersCustomization() {
+        const selectElement = document.getElementById("node-input-function");
+        const fileNameContainer = document.getElementById("contenedor-file-name");
+
+        switch (selectElement.value) {
+            case "SaveTXT" || "SaveCSV":
+                fileNameContainer.style.display = "block";
+                break;
+            default:
+                fileNameContainer.style.display = "none";
+                break;
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('NumberDisplay',{
+        category: 'displays',
+        color: '#08bd08',
+        defaults: {
+            function: {value:""},
+            portnumber: {value: -1},
+            filename: {value:""}
+        },
+        inputs:1,
+        outputs:0,
+        inputLabels: "DataType of inPort is TNumber",
+        icon: "display_icon.png",
+        label: function() {
+            return this.label || "NumberDisplay";
+        },
+        oneditprepare: function() {
+            var node = this;
+            $("#node-input-function").on("change", function() {
+                node.label = $(this).val();
+            });
+        },
+        oneditsave: function () {
+            this.label = $("#node-input-function").val();
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="NumberDisplay">
+    <div class="form-row">
+        <label for="node-input-function"><i class="fa fa-tag"></i> Functionalities </label><span>&nbsp;&nbsp;</span>
+        <select name="function" id="node-input-function">
+<!--        <select name="function" id="node-input-function" onchange="showShowNumbersCustomization()">-->
+          <option value="ConsoleDisplay">Display the value in the console</option>
+          <option value="SaveTXT">Save (.txt)</option>
+          <option value="SaveCSV">Save (.csv)</option>
+        </select>
+        <br>
+        <label for="node-input-portnumber"><i class="fa fa-tag"></i> Select input port number </label>
+        <input name="portnumber" id="node-input-portnumber" 
+               type="number" min="0" max= "65536" step="1" placeholder="Ataka zenbakia"/>
+        <br><br>
+        <div id="contenedor-file-name" style="display: block;">
+            <label for="node-input-filename"><i class="fa fa-tag"></i> Add the name of the file </label>
+            <input name="fileName" id="node-input-filename" type="text"
+                   placeholder="File path and name">
+        </div>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="NumberDisplay">
+    <p>This is the Fog component for displaying numbers. Its main purpose is to display numbers to the user. It offers three functionalities for this presentation.</p>
+    <ul>
+        <li><strong>Console display:</strong> This functionality presents the obtained numbers on the screen. It uses the program's console to achieve this. The data type of this functionality is <u>TNumber</u>.</li>
+        <li><strong>Gorde TXT:</strong> This functionality stores the numbers obtained in a TXT file. It provides the '<em>custom_filename</em>' variable to specify the file name. The data type of this functionality is <u>TNumber</u>.</li>
+        <li><strong>Gorde CSV:</strong> This functionality stores the numbers obtained in a CSV file. It provides the '<em>custom_filename</em>' variable to specify the file name. The data type of this functionality is <u>TNumber</u>.</li>
+    </ul>
+
+</script>
