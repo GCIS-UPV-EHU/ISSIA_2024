@@ -21,8 +21,10 @@ In this subsection links to several additional resources that have not been adde
 > The virtual machines has been uploaded to an external storage service due to their size.
 
 
-- [ROS-SPADE virtual machine](TODO)
-- [Virtual Machine cluster](TODO)
+- [ROS-SPADE virtual machine](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EWdgaNVAHkJGnwb53DGHnhABbAQevAm58c8_MC9VbzQRAA?e=VmQPys)
+- [NodeRED-Kubernetes cluster virtual machine](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EY-w9F3VoTxMs9CW_FSA5gYBA-FT5B4OKl0zBMkG7dMkNw?e=j7gHNQ)
+- [Prosody XMPP server virtual machine](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EW9ZPY1C8ZhBvy3jdNVN3RIBsuuZ11p-v4EL-13LiV6-PA?e=spkKnE)
+- [Resources of the session `Designing and implementing field agents with IEC 61499 and 4diac`](https://upvehueus-my.sharepoint.com/:f:/g/personal/aintzane_armentia_ehu_eus/EqEXteC_KdNLnC5wAg1pRHgB-6yU80s_omYuH3qq3iTLnA?e=Wn0gi6)
 - [Published article where the contribution of the session `Microservice-based Industrial Agents: Managing manufacturing applications through the Edge-Fog-Cloud continuum` is presented](https://doi.org/10.1016/j.future.2024.03.053).
 
 > [!TIP]
