@@ -6,8 +6,6 @@ This repository contains all the resources worked with during the ISSIA.
 
 ## Repository structure
 
-The content is structured as follows:
-
 - [Keynote resources](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/keynote_resources): resources of the regular, research and industry keynotes provided by the speakers in the chronological order according to the time schedule of the event.
 - [Multi-agent programming](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/multi_agent_programming): files related to the session `Multi-agent programming (part I): Fundamentals`.
 - [ROS-SPADE use case](https://github.com/GCIS-UPV-EHU/ISSIA_2024/tree/main/ros_spade_use_case): files related to Turtlebot-Warehouse use case presented in `Multi-agent programming (part II): Gateway Agent: A customization mechanism for asset integration` and `Multi-agent programming (part III): IEEE 2660.1-2020: Asset integration practices`. [Reference article](https://doi.org/10.1016/j.compind.2023.103859).
@@ -15,10 +13,8 @@ The content is structured as follows:
 
 ## Additional resources
 
-In this subsection links to several additional resources that have not been added:
-
-> [!NOTE]
-> The virtual machines has been uploaded to an external storage service due to their size.
+> [!VIRTUAL MACHINES]
+> Virtual machines have been uploaded to an external storage service due to their size.
 
 - [ROS-SPADE virtual machine (Turtlebot-Warehouse use case)](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EWdgaNVAHkJGnwb53DGHnhABbAQevAm58c8_MC9VbzQRAA?e=VmQPys)
 - [NodeRED-Kubernetes cluster virtual machine](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EY-w9F3VoTxMs9CW_FSA5gYBA-FT5B4OKl0zBMkG7dMkNw?e=j7gHNQ)
