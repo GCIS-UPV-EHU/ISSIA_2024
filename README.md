@@ -26,4 +26,4 @@ In this subsection links to several additional resources that have not been adde
 - [Published article where the contribution of the session `Microservice-based Industrial Agents: Managing manufacturing applications through the Edge-Fog-Cloud continuum` is presented](https://doi.org/10.1016/j.future.2024.03.053).
 
 > [!TIP]
-> [Discussions](https://github.com/ekhurtado/Component_I4_0/discussions) page has been set as available to share announcements, create conversations, post questions, and more.
+> [Discussions](https://github.com/GCIS-UPV-EHU/ISSIA_2024/discussions) page has been set as available to share announcements, create conversations, post questions, and more.
