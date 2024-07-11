@@ -13,7 +13,7 @@ This repository contains all the resources worked with during the ISSIA.
 
 ## Additional resources
 
-> [!VIRTUAL MACHINES]
+> [!NOTE]
 > Virtual machines have been uploaded to an external storage service due to their size.
 
 - [ROS-SPADE virtual machine (Turtlebot-Warehouse use case)](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EWdgaNVAHkJGnwb53DGHnhABbAQevAm58c8_MC9VbzQRAA?e=VmQPys)
