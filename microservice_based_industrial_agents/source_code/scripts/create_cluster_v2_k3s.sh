@@ -1,3 +1,5 @@
+###### AUTHOR: Oskar Casquero ######
+
 #echo "########## ADDING YOUR USER TO SUDOERS FILE ##########"
 #echo "If you already have added your current user to sudoers file,"
 #echo "you can skip this part and press any key to continue"
