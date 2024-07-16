@@ -23,3 +23,11 @@ This repository contains all the resources worked with during the ISSIA.
 
 > [!TIP]
 > [Discussions](https://github.com/GCIS-UPV-EHU/ISSIA_2024/discussions) page has been set as available to share announcements, create conversations, post questions, and more.
+
+## Gallery
+
+## Sponsorship
+
+![alt-text-1](images/ISSIA-2024%20-%20Sponsors%20-%20EHU.png) ![alt-text-2](images/ISSIA-2024%20-%20Sponsors%20-%20EIB.png) ![alt-text-3](images/ISSIA-2024%20-%20Sponsors%20-%20DISA.png)
+
+
