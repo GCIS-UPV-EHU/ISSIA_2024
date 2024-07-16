@@ -33,9 +33,9 @@ All photos taken during ISSIA 2024 are available at [this link](https://upvehueu
 ![alt-text-1](images/ISSIA-2024%20-%20Sponsors%20-%20EHU.png) ![alt-text-2](images/ISSIA-2024%20-%20Sponsors%20-%20EIB.png) ![alt-text-3](images/ISSIA-2024%20-%20Sponsors%20-%20DISA.png)
 
 <p>
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20EHU.png" hspace="10" >
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20EIB.png" hspace="10" >
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20DISA.pngg" hspace="10" >
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20EHU.png" width="33%" >
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20EIB.png" width="33%" >
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20DISA.png" width="33%" >
 </p>
 
 
