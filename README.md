@@ -16,10 +16,10 @@ This repository contains all the resources worked with during the ISSIA.
 > [!NOTE]
 > Virtual machines have been uploaded to an external storage service due to their size.
 
-- [ROS-SPADE virtual machine (Turtlebot-Warehouse use case)](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EWdgaNVAHkJGnwb53DGHnhABbAQevAm58c8_MC9VbzQRAA?e=VmQPys)
-- [NodeRED-Kubernetes cluster virtual machine](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EY-w9F3VoTxMs9CW_FSA5gYBA-FT5B4OKl0zBMkG7dMkNw?e=j7gHNQ)
-- [Prosody (XMPP server) virtual machine](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EW9ZPY1C8ZhBvy3jdNVN3RIBsuuZ11p-v4EL-13LiV6-PA?e=spkKnE)
-- [Eclipse 4diac](https://upvehueus-my.sharepoint.com/:f:/g/personal/aintzane_armentia_ehu_eus/EqEXteC_KdNLnC5wAg1pRHgB-6yU80s_omYuH3qq3iTLnA?e=Wn0gi6)
+- [ROS-SPADE virtual machine (Turtlebot-Warehouse use case)](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EWdgaNVAHkJGnwb53DGHnhABnUEDh0XcUi9Qm4ViX2wWgg?e=I9aJH4)
+- [NodeRED-Kubernetes cluster virtual machine](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EY-w9F3VoTxMs9CW_FSA5gYBzVL8bY1ptKDx24asLz0VcA?e=LzceYf)
+- [Prosody (XMPP server) virtual machine](https://upvehueus-my.sharepoint.com/:u:/g/personal/aintzane_armentia_ehu_eus/EW9ZPY1C8ZhBvy3jdNVN3RIBgjU4DTgYTrsG50w1EQF9ng?e=ZUk6Oo)
+- [Eclipse 4diac](https://upvehueus-my.sharepoint.com/:f:/g/personal/aintzane_armentia_ehu_eus/EqEXteC_KdNLnC5wAg1pRHgBv2I_wCjBVEm6AM4egmQO1g?e=SHKj0n)
 
 > [!TIP]
 > [Discussions](https://github.com/GCIS-UPV-EHU/ISSIA_2024/discussions) page has been set as available to share announcements, create conversations, post questions, and more.
