@@ -26,8 +26,16 @@ This repository contains all the resources worked with during the ISSIA.
 
 ## Gallery
 
+All photos taken during ISSIA 2024 are available at [this link](https://upvehueus-my.sharepoint.com/:f:/g/personal/aintzane_armentia_ehu_eus/EipwA5SWT65LlN8PAOepk8IBiqlgidukecfBh9go3OD4hg?e=pc8CVl).
+
 ## Sponsorship
 
 ![alt-text-1](images/ISSIA-2024%20-%20Sponsors%20-%20EHU.png) ![alt-text-2](images/ISSIA-2024%20-%20Sponsors%20-%20EIB.png) ![alt-text-3](images/ISSIA-2024%20-%20Sponsors%20-%20DISA.png)
+
+<p>
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20EHU.png" hspace="10" >
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20EIB.png" hspace="10" >
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20DISA.pngg" hspace="10" >
+</p>
 
 
