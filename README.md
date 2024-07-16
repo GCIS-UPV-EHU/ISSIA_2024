@@ -37,21 +37,21 @@ All photos taken during ISSIA 2024 are available at [this link](https://upvehueu
 </p>
 
 <p>
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20GB.png" width="30%" >
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20IEEE-IES.png" width="30%" >
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20IEEE-SMC.png" width="30%" >
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20GB.png" width="30%" hspace="2">
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20IEEE-IES.png" width="30%" hspace="2">
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20IEEE-SMC.png" width="30%" hspace="2">
 </p>
 
 <p>
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20Produktion2030.png" width="30%" >
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20SMARTPM.png" width="30%" >
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20Vidrala.png" width="30%" >
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20Produktion2030.png" width="30%" hspace="2">
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20SMARTPM.png" width="30%" hspace="2">
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20Vidrala.png" width="30%" hspace="2">
 </p>
 
 <p>
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20Ingeteam.png" width="30%" >
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20CTC.png" width="30%" >
-    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20Tekniker.png" width="30%" >
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20Ingeteam.png" width="30%" hspace="2">
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20CTC.png" width="30%" hspace="2">
+    <img src="images/ISSIA-2024%20-%20Sponsors%20-%20Tekniker.png" width="30%" hspace="2">
 </p>
 
 
